@@ -1,0 +1,100 @@
+@import 'variables';
+@import 'utility';
+
+.container{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .card{
+        background-color: $Dark-Blue;
+        width: 90%;
+        border-radius: 10px;
+    }
+    .upper{
+        margin-bottom: 1.2rem;
+        padding: 3.2rem 2.4rem 2.4rem 3.4rem;
+        border-top-right-radius: 100px;
+    }
+    .lower{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem;
+        color: $Pale-Blue;
+        padding-bottom: 2.2rem;
+        .progress-labels{
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .progress-bar{
+            display: flex;
+            align-items: center;
+            margin-top: 1.2rem;
+            margin-bottom: 0.8rem;
+            height: 18px;
+            background-color: $Very-Dark-Blue;
+            border-radius: 30px;
+            .progress{
+                background-image: linear-gradient(90deg, $Gradient-1, $Gradient-2);
+                border-radius: 30px;
+                height: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 75%;
+                .ball{
+                    margin-right: 1px;
+                    border-radius: 50%;
+                    width: 12px;
+                    height: 12px;
+                    background-color: #fff;
+                }
+            }
+        }
+        .floating-card{
+            position: relative;
+            left: 15%;
+            .msg{
+                margin-top: 1.1rem;
+                padding: 1rem 2rem;
+                position: absolute;
+                border-radius: 10px;
+                background-color: #fff;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                strong{
+                    font-size: 40px;
+                    color: $Very-Dark-Blue;
+                }
+                span{
+                    margin-left: 0.8rem;
+                    font-size: 13px;
+                    color: $Grayish-Blue;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .icons{
+        padding-top: 2.1rem;
+        padding-bottom: 0.6rem;
+        display: flex;
+        gap: 1rem;
+        @for $i from 1 through 3{
+            .icon-#{$i}{
+                border-radius: 10px;
+                padding: 0.88rem 1.05rem;
+                background-color: $Very-Dark-Blue;
+                display: grid;
+                place-items: center;
+            }       
+        }
+    }
+    
+}
+// Desktop View

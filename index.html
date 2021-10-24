@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  
-  <title>Frontend Mentor | Fylo data storage component</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <title>Fylo</title>
 </head>
 <body>
-
-  <div class="container">
-    <div class="upper-container">
-      <img src="./images/logo.png" alt="" class="fylo">
-      <div class="icons">
-        <div class="icon-holder"><img src="./images/icon-document.png" alt=""></div>
-        <div class="icon-holder"><img src="./images/icon-folder.png" alt=""></div>
-        <div class="icon-holder"><img src="./images/icon-upload.png" alt=""></div>
-      </div>
-    </div>
-    <div class="lower-container">
-      <p>You’ve used <span>815 GB</span> of your storage</p>
-      <div class="progress-bar">
-        <div class="progress-bar-start">
-          <div class="ball"></div>
+    <div class="container">
+        <div class="card upper">
+            <div class="logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <div class="icons">
+                <div class="icon-1">
+                    <img src="./images/icon-document.png" alt="">
+                </div>
+                <div class="icon-2">
+                    <img src="./images/icon-folder.png" alt="">
+                </div>
+                <div class="icon-3">
+                    <img src="./images/icon-upload.png" alt="">
+                </div>
+            </div>
         </div>
-        <div class="progress-bar-end"></div>
-      </div>
-      <div class="progress-label">
-        <p>0 GB</p>
-        <p>1000 GB</p>
-      </div>
-      <div class="pop-out-card"><p><span class="enlarge">185</span> GB Left</p></div>
+        <div class="card lower">
+            <p class="desc">You've used <strong>815 GB</strong> of your storage</p>
+            <div class="progress-bar">
+                <div class="progress">
+                    <div class="ball"></div>
+                </div>
+            </div>
+            <div class="progress-labels">
+                <p><strong>0 GB</strong></p>
+                <p><strong>1000 GB</strong></p>
+            </div>
+            <div class="floating-card">
+                <div class="msg">
+                    <strong>185</strong>
+                    <span>GB LEFT</span>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </body>
 </html>
