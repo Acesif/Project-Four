@@ -1,12 +1,13 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
   font-size: 14px;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -16,53 +17,89 @@ body {
 }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .container .card {
   background-color: #1d2c67;
   width: 90%;
   border-radius: 10px;
 }
+
 .container .upper {
   margin-bottom: 1.2rem;
   padding: 3.2rem 2.4rem 2.4rem 3.4rem;
   border-top-right-radius: 100px;
 }
+
 .container .lower {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   padding: 2.5rem;
   color: #dddbff;
   padding-bottom: 2.2rem;
 }
+
 .container .lower .progress-labels {
   font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .container .lower .progress-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 1.2rem;
   margin-bottom: 0.8rem;
   height: 18px;
   background-color: #0c122c;
   border-radius: 30px;
 }
+
 .container .lower .progress-bar .progress {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
   background-image: linear-gradient(90deg, #ffa399, #ff4d97);
   border-radius: 30px;
   height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 75%;
 }
+
 .container .lower .progress-bar .progress .ball {
   margin-right: 1px;
   border-radius: 50%;
@@ -70,58 +107,77 @@ body {
   height: 12px;
   background-color: #fff;
 }
+
 .container .lower .floating-card {
-  height: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  margin: 0 auto;
 }
+
 .container .lower .floating-card .msg {
-  width: 200px;
-  transform: translateY(0.2rem);
   margin-top: 1.1rem;
   padding: 1rem 2rem;
+  position: absolute;
   border-radius: 10px;
   background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .container .lower .floating-card .msg strong {
   font-size: 40px;
   color: #0c122c;
 }
+
 .container .lower .floating-card .msg span {
   margin-left: 0.8rem;
   font-size: 13px;
   color: #848794;
   font-weight: 700;
 }
+
 .container .icons {
   padding-top: 2.1rem;
   padding-bottom: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
 }
+
 .container .icons .icon-1 {
   border-radius: 10px;
   padding: 0.88rem 1.05rem;
   background-color: #0c122c;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }
+
 .container .icons .icon-2 {
   border-radius: 10px;
   padding: 0.88rem 1.05rem;
   background-color: #0c122c;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }
+
 .container .icons .icon-3 {
   border-radius: 10px;
   padding: 0.88rem 1.05rem;
   background-color: #0c122c;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }
@@ -129,49 +185,6 @@ body {
 @media screen and (min-width: 768px) {
   body {
     background-image: url(../images/bg-desktop.png);
-    background-color: #0c122c;
-    background-size: contain;
-    background-position: bottom;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .container {
-    flex-direction: row;
-    width: 100%;
-    align-items: flex-end;
-    padding-bottom: 21%;
-    gap: 2.2rem;
-  }
-  .container .upper {
-    padding: 3.5rem 3rem 2rem 2.8rem;
-    width: 27%;
-    margin-bottom: 0px;
-    margin-left: 8%;
-  }
-  .container .lower {
-    margin-top: 2px;
-    width: 42%;
-    text-align: start;
-  }
-  .container .lower .floating-card {
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  .container .lower .floating-card .msg {
-    width: 190px;
-    transform: translateY(-10rem);
-  }
-  .container .lower .floating-card::after {
-    position: absolute;
-    transform: translateY(-6.2rem);
-    content: " ";
-    width: 0;
-    height: 0;
-    border-left: 30px solid transparent;
-    border-top: 30px solid #fff;
   }
 }
-
 /*# sourceMappingURL=style.css.map */

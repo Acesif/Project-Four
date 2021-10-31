@@ -1,6 +1,11 @@
 @import 'variables';
 @import 'utility';
 
+body{
+    background-image: url(../images/bg-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .container{
     display: flex;
     height: 100vh;
@@ -55,12 +60,15 @@
             }
         }
         .floating-card{
-            position: relative;
-            left: 15%;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             .msg{
+                width: 200px;
+                transform: translateY(0.2rem);
                 margin-top: 1.1rem;
                 padding: 1rem 2rem;
-                position: absolute;
                 border-radius: 10px;
                 background-color: #fff;
                 display: flex;
@@ -98,3 +106,50 @@
     
 }
 // Desktop View
+
+@media screen and (min-width: 768px){
+    body{
+        background-image: url(../images/bg-desktop.png);
+        background-color: $Very-Dark-Blue;
+        background-size: contain;
+        background-position: bottom;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        flex-direction: row;
+        width: 100%;
+        align-items: flex-end;
+        padding-bottom: 21%;
+        gap: 2.2rem;
+        .upper{
+            padding: 3.5rem 3rem 2rem 2.8rem;
+            width: 27%;
+            margin-bottom: 0px;
+            margin-left: 8%;
+        }
+        .lower{
+            margin-top: 2px;
+            width: 42%;
+            text-align: start;
+            .floating-card{
+                flex-direction: row;
+                justify-content: flex-end;
+                .msg{
+                    width: 190px;
+                    transform: translateY(-10rem);
+                }
+            }
+            .floating-card::after{
+                position: absolute;
+                transform: translateY(-6.2rem);
+                content: ' ';
+                width: 0;
+                height: 0;
+                border-left: 30px solid transparent;
+                border-top: 30px solid #fff;
+            }
+        }
+    }
+}
